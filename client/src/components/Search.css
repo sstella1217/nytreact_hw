@@ -1,0 +1,49 @@
+#topic {
+  margin-top: 5px;
+  margin-right:45px;
+  margin-left:45px;
+  height:40px;
+ 
+
+
+}
+
+#syear {
+  margin-top: 5px;
+  margin-right:45px;
+  margin-left:45px;
+  height:40px;
+
+}
+
+#eyear {
+  margin-top: 5px;
+  margin-right:45px;
+  margin-left:45px;
+  height:40px;
+
+}
+
+h4 {
+  font-family: Times;
+  font-size: 24px;
+}
+
+#search {
+  margin-top: 15px;
+  margin-right:90px;
+  margin-left:90px;
+  font-family: Times;
+  border-bottom: 2px;
+  border-style: solid;
+  border-bottom-color: black; 
+
+}
+
+#sbutt {
+  border-color: black;
+  border-style: solid;
+  height: 70px;
+  width: 150px;
+  border-width: 5px;
+}

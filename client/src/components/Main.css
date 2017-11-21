@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+.panel-body {
+  border-color: black;
+  border-style: solid;
+  border-bottom-color: black; 
+
+}
+
+h3 {
+  font-family: Times;
+  font-size: 24px;
+}

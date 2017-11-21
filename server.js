@@ -1,7 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -10,7 +9,6 @@ app.use(bodyParser.json());
 
 app.use(express.static("client/build"));
 
-app.use(routes);
 
 mongoose.Promise = global.Promise;
 
@@ -20,6 +18,31 @@ mongoose.connect(
     useMongoClient: true
   }
 );
+
+const db = require('./models')
+	const {Article} = db
+
+
+app.post("/api/saved", (req, res) => {
+	var article = req.body
+	console.log(article)
+
+
+	Article.create(article)
+		.then(() => {
+			res.json(article)
+		})
+		.catch((err) => {
+			res.json(err)
+		})
+
+})
+
+app.get("*", function(req, res){
+	res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+
+
 
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
